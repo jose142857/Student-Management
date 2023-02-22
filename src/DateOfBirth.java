@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class DateOfBirth {
     private int day ;
     private int month ;
@@ -38,4 +40,9 @@ public class DateOfBirth {
     public void setYear(int year) {
         this.year = year;
     }
+
+//    equal methods
+
+
+
 }

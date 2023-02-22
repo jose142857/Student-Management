@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Student {
     private String id ;
     private String fullName ;
@@ -71,9 +73,18 @@ public class Student {
 
     }
 
-    public boolean checkDayOfBirthSameOrNot(Student other) {
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || this.getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return this.dayOfBirth.equals(student.dayOfBirth);
+    }
+       public boolean checkDayOfBirthSameOrNot(Student a) {
+       return equals(a);
 
-        return this.dayOfBirth == other.dayOfBirth;
 
     }
+
+
 }
